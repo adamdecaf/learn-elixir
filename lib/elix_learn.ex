@@ -58,6 +58,9 @@ defmodule ElixLearn do
   IO.puts (Enum.map list, size(&1))
   IO.puts (Enum.reduce [1,2,3], 1, &1 * &2)
 
+  IO.puts "for!"
+  IO.puts (lc n inlist [1,2,3,4], do: n * 2)
+
   defp double(n) do
     if is_number(n) do
       n * 2
